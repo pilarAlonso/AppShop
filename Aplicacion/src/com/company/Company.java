@@ -14,8 +14,8 @@ public int totalPrice(){
 
 }
 
-    public Company( String NIF) {
-
+    public Company( String NIF,User owner){
+        this.owner=owner;
 
         this.NIF = NIF;
     }

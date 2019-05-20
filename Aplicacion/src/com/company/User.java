@@ -11,6 +11,9 @@ public class User {
         this.company = company;
         interestList.add(interest);
     }
+    public User(Interest interest){
+    	interestList.add(interest);
+	}
 
     @Override
     public String toString() {

@@ -11,17 +11,21 @@ public class Main {
         List<Application> applicationList = new ArrayList<>();
         List<User> userList = new ArrayList<>();
         List<Company> companyList = new ArrayList<>();
-
+        Tag tag2=new Tag("lectura");
+        Interest interest2=new Interest("libros",tag2);
+        tag2.addInterest(interest2);
+		Tag tag = new Tag("juegosDeOcio");
+		Interest interest1 = new Interest("juegos", tag);
+		tag.addInterest(interest1);
         Document document1 = new Document("documento1");
         Category category1 = new Category("ocio");
         Application application1 = new Application("aplicacion1", document1, category1, 45);
         document1.addApplication(application1);
         category1.addApp(application1);
-        Company company = new Company("BE1234543");
+        User owner1=new User(interest1);
+        Company company = new Company("BE1234543",owner1);
         company.addApplicat(application1);
-        Tag tag = new Tag("juegosDeOcio");
-        Interest interest1 = new Interest("juegos", tag);
-        tag.addInterest(interest1);
+
         User user1 = new User(company, interest1);
         interest1.addUser(user1);
         company.addUser(user1);
@@ -34,7 +38,8 @@ public class Main {
         Application application2 = new Application("arte", document1, category2, 23);
         applicationList.add(application2);
         category2.addApp(application2);
-        Company company2 = new Company("be12345443");
+        User owner2=new User(interest2);
+        Company company2 = new Company("be12345443",owner2);
         company.addApplicat(application2);
         application2.addCompany(company2);
         companyList.add(company2);
