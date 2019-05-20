@@ -13,4 +13,16 @@ public class Category  {
     public void addApp(Application application){
         applicationList.add(application);
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    @Override
+    public String toString() {
+        return "Category{" +
+
+                ", nombre='" + nombre + '\'' +
+                '}';
+    }
 }

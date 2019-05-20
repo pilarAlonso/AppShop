@@ -11,4 +11,12 @@ public class User {
         this.company = company;
         interestList.add(interest);
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "company=" + company +
+                ", interestList=" + interestList +
+                '}';
+    }
 }
