@@ -6,6 +6,7 @@ import java.util.List;
 public class Company {
 private List<Application> applicationList=new ArrayList<>();
 private List<User>userList=new ArrayList<>();
+private User owner;
 private String NIF;
 public int totalPrice(){
     int price =applicationList.stream().mapToInt(application->application.getPrice()).sum();
@@ -14,6 +15,7 @@ public int totalPrice(){
 }
 
     public Company( String NIF) {
+
 
         this.NIF = NIF;
     }
@@ -39,5 +41,9 @@ public int totalPrice(){
 
     public String getNIF() {
         return NIF;
+    }
+
+    public void setOwner(User owner) {
+        this.owner = owner;
     }
 }
